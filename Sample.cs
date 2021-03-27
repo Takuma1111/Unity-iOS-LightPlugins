@@ -12,11 +12,7 @@ public class Sample : MonoBehaviour
 
     bool judge = false;
 
-    void Start()
-    {
-        // Hello();
-    }
-
+   
    public void On(){
         if(judge){
             lightOff();
