@@ -14,18 +14,14 @@ class ViewController: UIViewController {
         
         if avDevice.hasTorch {
             do {
-                // torch device lock on
                 try avDevice.lockForConfiguration()
                 
                 if (flg){
-                    // flash LED ON
                     avDevice.torchMode = AVCaptureDevice.TorchMode.on
                 } else {
-                    // flash LED OFF
                     avDevice.torchMode = AVCaptureDevice.TorchMode.off
                 }
                 
-                // torch device unlock
                 avDevice.unlockForConfiguration()
                 
             } catch {
